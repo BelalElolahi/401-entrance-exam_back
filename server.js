@@ -35,8 +35,8 @@ app.use(express.json());
  app.get('/watchs',gitAlldataApicontroler)
  app.get('/watch-user',gitFAVWatchController)
  app.post('/create-watch',createWatchController)
- app.get('/delete-watch/:id',deleteWatchController)
- app.get('/update-watch/:id',updateWatchController)
+ app.delete('/delete-watch/:id',deleteWatchController)
+ app.put('/update-watch/:id',updateWatchController)
 
 
 mongoose.connect(`${ATLAS_DATABASE_URL}`, {useNewUrlParser: true}, { useUnifiedTopology: true});
